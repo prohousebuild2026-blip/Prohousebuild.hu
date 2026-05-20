@@ -1,246 +1,205 @@
 
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="hu">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PROHOUSE DESIGN & BUILD</title>
+<title>Prohouse-& Build | Prémium Generálkivitelezés</title>
+<meta name="description" content="Prohouse-& Build - generálkivitelezés, lakásfelújítás, konténerházak, faházak Magyarországon. Prémium kivitelezés, gyors ajánlatadás.">
+<meta name="keywords" content="generálkivitelezés, lakásfelújítás, konténerház, faház, burkolás, építőipar">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;scroll-behavior:smooth;}
+body{background:#0b0b0b;color:#fff;line-height:1.6;}
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+/* NAV */
+.nav{
+position:fixed;top:0;left:0;width:100%;z-index:1000;
+display:flex;justify-content:space-between;align-items:center;
+padding:15px 25px;
+background:rgba(0,0,0,0.75);
+backdrop-filter:blur(10px);
 }
+.nav a{color:#fff;text-decoration:none;margin-left:15px;font-size:14px;transition:0.3s;}
+.nav a:hover{color:#d4af37;}
+.nav strong{color:#d4af37;}
 
-body{
-background:#0b0b0b;
-color:white;
-}
-
-header{
-position:fixed;
-width:100%;
-top:0;
-padding:20px 40px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(0,0,0,0.9);
-border-bottom:1px solid #d4a63a;
-z-index:999;
-}
-
-.logo{
-font-size:28px;
-font-weight:bold;
-color:#d4a63a;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
-transition:0.3s;
-}
-
-nav a:hover{
-color:#d4a63a;
-}
-
+/* HERO */
 .hero{
 height:100vh;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-
-background:
-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-url("https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1600");
-
+padding:20px;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.85)),
+url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80');
 background-size:cover;
 background-position:center;
 }
+.hero h1{font-size:56px;animation:fadeIn 1.5s ease;}
+.hero p{font-size:20px;margin-top:10px;color:#ddd;animation:fadeIn 2s ease;}
 
-.hero h1{
-font-size:60px;
-margin-bottom:20px;
-}
-
-.gold{
-color:#d4a63a;
-}
-
-.button{
-display:inline-block;
-padding:15px 30px;
-background:#d4a63a;
-color:black;
-text-decoration:none;
-border-radius:10px;
+.btn{
+margin-top:20px;
+padding:14px 30px;
+background:#d4af37;
+color:#000;
+border:none;
 font-weight:bold;
-margin-top:25px;
+border-radius:8px;
+text-decoration:none;
+transition:0.3s;
+display:inline-block;
 }
+.btn:hover{transform:scale(1.05);}
 
-.section{
-padding:80px 20px;
-max-width:1200px;
-margin:auto;
-}
+section{padding:90px 20px;max-width:1100px;margin:auto;}
+.section-title{font-size:36px;margin-bottom:25px;color:#d4af37;text-align:center;}
 
-.cards{
+/* SERVICES */
+.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
 }
-
 .card{
 background:#151515;
-padding:30px;
-border-radius:15px;
-border:1px solid #333;
-transition:0.4s;
+padding:25px;
+border-radius:12px;
+transition:0.3s;
+border:1px solid #222;
 }
-
 .card:hover{
-transform:translateY(-10px);
-border-color:#d4a63a;
+transform:translateY(-8px);
+border-color:#d4af37;
 }
 
-footer{
-padding:40px;
+/* ABOUT */
+.about{
 text-align:center;
-border-top:1px solid #333;
+max-width:800px;
+margin:auto;
+color:#ccc;
 }
 
+/* TESTIMONIALS */
+.testimonial{
+background:#151515;
+padding:20px;
+border-radius:10px;
+font-style:italic;
+}
+
+/* CONTACT */
+.contact{
+background:#111;
+padding:40px;
+border-radius:12px;
+max-width:700px;
+margin:auto;
+}
+input,textarea{
+width:100%;
+padding:12px;
+margin-top:10px;
+border:none;
+border-radius:6px;
+background:#222;
+color:#fff;
+}
+
+footer{text-align:center;padding:25px;background:#000;color:#777;margin-top:50px;}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:#fff;
+padding:14px 18px;
+border-radius:50px;
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 0 15px rgba(0,0,0,0.5);
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
 </style>
 </head>
-
 <body>
 
-<header>
-
-<div class="logo">
-PROHOUSE
-</div>
-
-<nav>
-
-<a href="#">Főoldal</a>
-<a href="#">Szolgáltatások</a>
-<a href="#">Projektek</a>
-<a href="#">Kapcsolat</a>
-
-</nav>
-
-</header>
-
-<section class="hero">
-
+<div class="nav">
+<div><strong>Prohouse-& Build</strong></div>
 <div>
-
-<h1>
-PRÉMIUM
-<span class="gold">
-ÉPÍTŐIPARI
-</span>
-KIVITELEZÉS
-</h1>
-
-<p>
-Generálkivitelezés | Container Houses | Wooden Houses
-</p>
-
-<a class="button" href="tel:+36303690832">
-
-Hívás most
-
-</a>
-
+<a href="#services">Szolgáltatások</a>
+<a href="#about">Rólunk</a>
+<a href="#testimonials">Vélemények</a>
+<a href="#contact">Kapcsolat</a>
+</div>
 </div>
 
+<div class="hero">
+<h1>Prémium Generálkivitelezés</h1>
+<p>Otthonok, amiket megálmodsz – mi megépítjük</p>
+<a class="btn" href="#contact">Ingyenes ajánlatkérés</a>
+</div>
+
+<section id="services">
+<h2 class="section-title">Szolgáltatások</h2>
+<div class="grid">
+<div class="card"><h3>Generál kivitelezés</h3><p>Teljes építési projektek A-tól Z-ig.</p></div>
+<div class="card"><h3>Lakásfelújítás</h3><p>Modern, prémium felújítások.</p></div>
+<div class="card"><h3>Konténerházak</h3><p>Gyors, modern megoldások.</p></div>
+<div class="card"><h3>Faházak</h3><p>Természetes, időtálló szerkezetek.</p></div>
+</div>
 </section>
 
-<section class="section">
-
-<h2 class="gold">
-
-Szolgáltatások
-
-</h2>
-
-<br><br>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>Generálkivitelezés</h3>
-
+<section id="about">
+<h2 class="section-title">Rólunk</h2>
+<div class="about">
 <p>
-Teljes körű kivitelezés.
+A Prohouse-& Build egy prémium építőipari vállalkozás, amely teljes körű kivitelezést, felújítást és egyedi építési megoldásokat kínál Magyarországon.
+Célunk: minőség, gyorsaság és megbízhatóság.
 </p>
-
 </div>
-
-<div class="card">
-
-<h3>Konténerházak</h3>
-
-<p>
-Tervezés és kivitelezés.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Faházak</h3>
-
-<p>
-Modern és prémium kivitel.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Tervezés</h3>
-
-<p>
-3D látványtervek.
-</p>
-
-</div>
-
-</div>
-
 </section>
+
+<section id="testimonials">
+<h2 class="section-title">Ügyfélvélemények</h2>
+<div class="grid">
+<div class="testimonial">„Gyors, precíz munka, nagyon elégedettek vagyunk!”</div>
+<div class="testimonial">„A ház felújítás tökéletes lett, ajánlom!”</div>
+<div class="testimonial">„Profi csapat, korrekt árak.”</div>
+</div>
+</section>
+
+<section id="contact">
+<h2 class="section-title">Kapcsolat</h2>
+<div class="contact">
+<p>📞 +36 30 636 9083</p>
+<p>📧 prohouse.build2026@gmail.com</p>
+
+<form action="mailto:prohouse.build2026@gmail.com" method="post" enctype="text/plain">
+<input type="text" name="name" placeholder="Név" required>
+<input type="email" name="email" placeholder="Email" required>
+<textarea name="message" rows="5" placeholder="Üzenet" required></textarea>
+<button class="btn" type="submit">Küldés</button>
+</form>
+</div>
+</section>
+
+<a class="whatsapp" href="https://wa.me/36306369083" target="_blank">WhatsApp</a>
 
 <footer>
-
-📞 06303690832
-
-<br><br>
-
-PROHOUSE DESIGN & BUILD
-
+© 2026 Prohouse-& Build | Minden jog fenntartva
 </footer>
 
 </body>
-</html><img width="692" height="1536" alt="1000002858" src="https://github.com/user-attachments/assets/0fac02b7-9e21-4c8b-94b3-99a68de229d7" />
-<img width="1054" height="1492" alt="1000002854" src="https://github.com/user-attachments/assets/648c6d3f-6a8a-4ead-b18b-7577b49a06a4" />
-<img width="1220" height="2712" alt="1000002860" src="https://github.com/user-attachments/assets/e778b5b3-3d0b-4249-aa9b-a7f369f17869" />
-<img width="1220" height="2712" alt="1000002861" src="https://github.com/user-attachments/assets/ee374ac2-21ca-4ad1-9718-1db3e68a3c54" />
-<img width="1302" height="1208" alt="1000002877" src="https://github.com/user-attachments/assets/910d91d9-5092-4a30-8010-6f63bd4f40e8" />
-<img width="922" height="2048" alt="1000002882" src="https://github.com/user-attachments/assets/748107d0-b56e-41db-9270-2a7261acd043" />
-<img width="922" height="2048" alt="1000002883" src="https://github.com/user-attachments/assets/cd30f744-ad8e-4015-a8c4-a2b4784b60e2" />
-<img width="922" height="2048" alt="1000002884" src="https://github.com/user-attachments/assets/51cdb922-22a2-462d-85c8-6e47d0066f22" />
-<img width="922" height="2048" alt="1000002885" src="https://github.com/user-attachments/assets/78d9da9c-3fc6-4667-8974-d40ef092f42e" />
-<img width="922" height="2048" alt="1000002886" src="https://github.com/user-attachments/assets/022b36c0-c033-4852-bfe7-2bcb95bd270f" />
-<img width="2048" height="922" alt="1000002887" src="https://github.com/user-attachments/assets/9ef9c52f-dd1c-4292-b056-cbcd19900a19" />
-<img width="922" height="2048" alt="1000002888" src="https://github.com/user-attachments/assets/da413f1a-6b48-4fde-a903-82f29e3590ba" />
-<img width="922" height="2048" alt="1000002889" src="https://github.com/user-attachments/assets/489ba4e9-a0ce-4116-929b-06dae767156f" />
+</html>
